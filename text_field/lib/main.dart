@@ -26,10 +26,23 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.person),
+                  // prefixText: "Nama",
+                  // prefixStyle: TextStyle(
+                  //   color: Colors.blue,
+                  //   fontWeight: FontWeight.bold,
+                  // ),
+                  hintText: "Nama Lengkap",
+                  labelText: "Nama Lengkap",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 onChanged: (value) {
                   setState(() {});
                 },
-                obscureText: true,
+                // obscureText: true,
                 controller: controllerData,
               ),
               Text(controllerData.text),
